@@ -1667,8 +1667,8 @@ _git_checkout ()
 			__git_complete_refs --mode="refs"
 		elif [ -n "$(__git_find_on_cmdline "--track")" ]; then
 			__git_complete_refs --mode="remote-heads"
-		elif [ "$command" = "checkoutr" ]; then
-			__git_complete_refs $dwim_opt --mode="refs"
+		# elif [ "$command" = "checkoutr" ]; then
+		# 	__git_complete_refs $dwim_opt --mode="refs"
 		else
 			__gitcomp_direct "$(__git_heads "" "$cur" " ")"
 		fi
